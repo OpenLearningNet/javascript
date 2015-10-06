@@ -170,7 +170,20 @@
       type: 'alien',
     };
     ```
-  N.B. for a "class" of students, we use the synonym "cohort" in code. "Cohort" is written as "Class" for the user.
+  
+    N.B. for a "class" of students, we use the synonym "cohort" in code. "Cohort" is written as "Class" for the user.
+    
+    ```javascript
+    // bad
+    const student = {
+      class: 'Class of 2015',
+    };
+    
+    // good
+    const student = {
+      cohort: 'Class of 2015',
+    };
+    ```
 
   <a name="es6-computed-properties"></a>
   - [3.4](#3.4) <a name='3.4'></a> Use computed property names when creating objects with dynamic property names.
