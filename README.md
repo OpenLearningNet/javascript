@@ -170,6 +170,7 @@
       type: 'alien',
     };
     ```
+  N.B. for a "class" of students, we use the synonym "cohort" in code. "Cohort" is written as "Class" for the user.
 
   <a name="es6-computed-properties"></a>
   - [3.4](#3.4) <a name='3.4'></a> Use computed property names when creating objects with dynamic property names.
