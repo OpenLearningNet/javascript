@@ -771,7 +771,8 @@
     const luke = new Jedi();
 
     luke.jump()
-      .setHeight(20);
+      .setHeight(20)
+    ;
     ```
 
 
@@ -1432,7 +1433,8 @@
         highlight().
         end().
       find('.open').
-        updateCount();
+        updateCount()
+    ;
 
     // good
     $('#items')
@@ -1440,13 +1442,15 @@
         .highlight()
         .end()
       .find('.open')
-        .updateCount();
+        .updateCount()
+    ;
 
     // bad
     const leds = stage.selectAll('.led').data(data).enter().append('svg:svg').class('led', true)
         .attr('width', (radius + margin) * 2).append('svg:g')
         .attr('transform', 'translate(' + (radius + margin) + ',' + (radius + margin) + ')')
-        .call(tron.led);
+        .call(tron.led)
+    ;
 
     // good
     const leds = stage.selectAll('.led')
@@ -1456,7 +1460,8 @@
         .attr('width', (radius + margin) * 2)
       .append('svg:g')
         .attr('transform', 'translate(' + (radius + margin) + ',' + (radius + margin) + ')')
-        .call(tron.led);
+        .call(tron.led)
+    ;
     ```
 
   - [18.7](#18.7) <a name='18.7'></a> Leave a blank line after blocks and before the next statement.
@@ -1623,6 +1628,18 @@
       const name = 'Skywalker';
       return name;
     })();
+    
+    // bad (interrupts chaining, and doesn't close the opening statement
+    chainable
+      .chainingMethod1()
+      .chainingMethod2();
+      
+    // good (creates a block for chaining)
+    chainable
+      .chainingMethod1()
+      .chainingMethod2()
+    ;
+    
     ```
 
     [Read more](http://stackoverflow.com/a/7365214/1712802).
